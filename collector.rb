@@ -6,6 +6,8 @@ pdir = File.basename(Dir.getwd)
 Dir.chdir("../")
 system 'cls'
 
+
+
 puts "If you run into any errors, delete the 'processing' folder and savethehashes.txt if they exist." 
 system 'PAUSE'
 system 'cls'
@@ -124,9 +126,9 @@ collections.each do |h,v|
 		end
 
 		if cont then
-			if not Dir.exist?("processing") then
-				Dir.mkdir("processing")
-			end
+			FileUtils.rm_rf("processing") if Dir.exist?("processing")
+			
+			Dir.mkdir("processing")
 			#Dir.mkdir("#{h}")
 			zipnames = []
 			system 'cls'
@@ -139,12 +141,18 @@ collections.each do |h,v|
 
 					zipn = "#{name}.osz"
 
+					#tester = File.new("brokenfiles.txt","w")
+
+					#tester.puts Dir.pwd
 					zipnames.push(zipn)
 					Zip::File.open("processing/#{zipn}",Zip::File::CREATE) do |zipfile|
 						filenames.each do |fn|
-							zipfile.add(fn,folder+'/'+fn)
+							#tester.puts "#{folder}/#{fn}" if not File.exist? "#{folder}/#{fn}"
+							zipfile.add(fn,"#{folder}/#{fn}") if File.exist? "#{folder}/#{fn}"
 						end
 					end
+
+					#tester.close
 
 
 				else
