@@ -23,7 +23,6 @@ end
 
 file2 = File.open("collection.db","rb")
 
-hformat = ["osu! version (e.g. 20150203)","Folder Count","AccountUnlocked (only false when the account is locked or banned in any way)","Date the account will be unlocked","Player name","Number of beatmaps"]
 headformat = ["in","in","bo","lo","st","in"]
 
 
