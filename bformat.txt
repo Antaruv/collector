@@ -1,0 +1,54 @@
+0	in	Size in bytes of the beatmap entry
+1	st	Artist name
+2	st	Artist name, in Unicode
+3	st	Song title
+4	st	Song title, in Unicode
+5	st	Creator name
+6	st	Difficulty (e.g. Hard, Insane, etc.)
+7	st	Audio file name
+8	st	MD5 hash of the beatmap
+9	st	Name of the .osu file corresponding to this beatmap
+10	by	Ranked status (4 = ranked, 5 = approved, 2 = pending/graveyard)
+11	sh	Number of hitcircles
+12	sh	Number of sliders (note: this will be present in every mode)
+13	sh	Number of spinners (note: this will be present in every mode)
+14	lo	Last modification time, Windows ticks.
+15	si	Approach rate. Byte if the version is less than 20140609, Single otherwise.
+16	si	Circle size. Byte if the version is less than 20140609, Single otherwise.
+17	si	HP drain. Byte if the version is less than 20140609, Single otherwise.
+18	si	Overall difficulty. Byte if the version is less than 20140609, Single otherwise.
+19	do	Slider velocity
+20	mid	An Int indicating the number of following Int-Double pairs, then the aforementioned pairs. Star Rating info for osu! standard, in each pair, the Int is the mod combination, and the Double is the Star Rating. Only present if version is greater than or equal to 20140609.
+21	mid	An Int indicating the number of following Int-Double pairs, then the aforementioned pairs. Star Rating info for Taiko, in each pair, the Int is the mod combination, and the Double is the Star Rating. Only present if version is greater than or equal to 20140609.
+22	mid	An Int indicating the number of following Int-Double pairs, then the aforementioned pairs. Star Rating info for CTB, in each pair, the Int is the mod combination, and the Double is the Star Rating. Only present if version is greater than or equal to 20140609.
+23	mid	An Int indicating the number of following Int-Double pairs, then the aforementioned pairs. Star Rating info for osu!mania, in each pair, the Int is the mod combination, and the Double is the Star Rating. Only present if version is greater than or equal to 20140609.
+24	in	Drain time, in seconds
+25	in	Total time, in milliseconds
+26	in	Time when the audio preview when hovering over a beatmap in beatmap select starts, in milliseconds.
+27	mti	An Int indicating the number of following Timing points, then the aforementioned Timing points.
+28	in	Beatmap ID
+29	in	Beatmap set ID
+30	in	Thread ID
+31	by	Grade achieved in osu! standard.
+32	by	Grade achieved in Taiko
+33	by	Grade achieved in CTB
+34	by	Grade achieved in osu!mania
+35	sh	Local beatmap offset
+36	si	Stack leniency
+37	by	Osu gameplay mode. 0x00 = osu!Standard, 0x01 = Taiko, 0x02 = CTB, 0x03 = Mania
+38	st	Song source
+39	st	Song tags
+40	sh	Online offset
+41	st	Font used for the title of the song
+42	bo	Is beatmap unplayed
+43	lo	Last time when beatmap was played
+44	bo	Is the beatmap osz2
+45	st	Folder name of the beatmap, relative to Songs folder
+46	lo	Last time when beatmap was checked against osu! repository
+47	bo	Ignore beatmap sounds
+48	bo	Ignore beatmap skin
+49	bo	Disable storyboard
+50	bo	Disable video
+51	bo	Visual override
+52	in	Last modification time (?)
+53	by	Mania scroll speed
