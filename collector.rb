@@ -28,7 +28,7 @@ file2 = File.open("collection.db","rb")
 headformat = ["in","in","bo","lo","st","in"]
 
 
-beatformat = ["in","st","st","st","st","st","st","st","st","st","by","sh","sh","sh","lo","si","si","si","si","do","mid","mid","mid","mid","in","in","in","mti","in","in","in","by","by","by","by","sh","si","by","st","st","sh","st","bo",
+beatformat = ["st","st","st","st","st","st","st","st","st","by","sh","sh","sh","lo","si","si","si","si","do","mid","mid","mid","mid","in","in","in","mti","in","in","in","by","by","by","by","sh","si","by","st","st","sh","st","bo",
 "lo","bo","st","lo","bo","bo","bo","bo","bo","in","by"]
 
 colhformat = ["in","in"]
@@ -66,7 +66,7 @@ if answer.downcase == "y" or not File.exist?("#{pdir}/savethehashes.txt") then
 
 	head[5].times do |t|
 		b = readformat(beatformat,file)
-		mtable[b[8]] = b[45]
+		mtable[b[7]] = b[44]
 
 		if t.to_f/500 == (t/500).to_i then
 			system 'cls'
